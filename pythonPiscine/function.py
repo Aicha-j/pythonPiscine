@@ -72,24 +72,55 @@ def paire_impaire():
         
 #Question 5 : 
 
-def s_fibo():    
+def s_fibo():  
+    n = int(input("Entrer un entier supérieur à 1 : "))
+
       
-   try:
-       n = int(input("Entrer un entier supérieur à 1 : "))
+    try:
+       if n > 1 : 
         
-        
-       fibo = [0]*(n)
-        
-       fibo[0] = 0
-        
-       fibo[1] = 1
-        
-        
-       for i in range(2,n):
-        
-         fibo[i] = fibo[i-1] + fibo[i-2]
-        
-       print(fibo)
-   except TypeError:
+           fibo = [0]*(n)
+            
+           fibo[0] = 0
+            
+           fibo[1] = 1
+            
+            
+           for i in range(2,n):
+            
+             fibo[i] = fibo[i-1] + fibo[i-2]
+            
+           print(fibo)
+       else:
+            print("saisir un entier suppérieur à 1 ")
+    except TypeError:
         print("saisir un entier !!! ")
         
+        
+#Question 7:
+    
+def list_commun(list1, list2):
+    
+    for i in list1:
+        for j in list2:
+            if i == j:
+                print(i)
+                break
+
+#Question 8 : 
+ 
+def mot_polyndrome():
+    try: 
+        mot = input("inserez un mot : ")
+        if str(mot) == "".join(reversed(mot)) :
+            print("Palyndrome")
+        else:
+            print("Not Palyndrome")
+    except TypeError:
+        print("veuillez inserez une chaine de caractère !!! ")
+        
+#Question 9 : 
+    
+#def del_doublons():
+    
+ 
